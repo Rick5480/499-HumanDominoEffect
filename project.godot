@@ -599,6 +599,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/gdUnit3/src/asserts/GdUnitVector3AssertImpl.gd"
 }, {
+"base": "",
+"class": "GitAPI",
+"language": "NativeScript",
+"path": "res://addons/godot-git-plugin/git_api.gdns"
+}, {
 "base": "GdUnitMonitor",
 "class": "GodotGdErrorMonitor",
 "language": "GDScript",
@@ -848,6 +853,7 @@ _global_script_class_icons={
 "GdUnitVector2AssertImpl": "",
 "GdUnitVector3Assert": "",
 "GdUnitVector3AssertImpl": "",
+"GitAPI": "",
 "GodotGdErrorMonitor": "",
 "IntFuzzer": "",
 "JUnitXmlReport": "",
@@ -894,12 +900,18 @@ SaveManager="*res://Autoloads/SaveManager.gd"
 MusicController="*res://Autoloads/MusicController.tscn"
 SFXController="*res://Autoloads/SFXController.tscn"
 ReferenceManager="*res://Autoloads/ReferenceManager.gd"
+LogManager="*res://Autoloads/LogManager.gd"
 
 [display]
 
 window/dpi/allow_hidpi=true
 window/stretch/mode="2d"
 window/stretch/aspect="expand"
+
+[editor]
+
+version_control_autoload_on_startup=true
+version_control_plugin_name="GitAPI"
 
 [editor_plugins]
 
@@ -972,12 +984,12 @@ Jump={
 }
 Place={
 "deadzone": 0.5,
-"events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":2,"pressed":false,"doubleclick":false,"script":null)
+"events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":2,"canceled":false,"pressed":false,"doubleclick":false,"script":null)
  ]
 }
 Break={
 "deadzone": 0.5,
-"events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":1,"pressed":false,"doubleclick":false,"script":null)
+"events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":1,"canceled":false,"pressed":false,"doubleclick":false,"script":null)
  ]
 }
 Pause={
@@ -990,10 +1002,6 @@ Save_Load={
 "events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":96,"unicode":0,"echo":false,"script":null)
  ]
 }
-
-[mono]
-
-project/assembly_name="The Domino Effect"
 
 [physics]
 

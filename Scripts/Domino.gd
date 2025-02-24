@@ -62,7 +62,7 @@ func _on_Area2D_input_event(_viewport: Node, event: InputEvent, _shape_idx: int)
 				else:
 					#TODO: Below line delays returning the domino in case the domino is being placed. This should be done in a better way
 					yield(get_tree().create_timer(0.05), "timeout")
-					# TODO: Need to fix position of domnio
+					# TODO: Need to fix position of domino
 					_world.clear_selected_domino()
 					selected = false
 
@@ -72,5 +72,5 @@ func _physics_process(_delta):
 		var mousePos = get_global_mouse_position()
 		position.x = 2* (mousePos.x);
 		position.y = 2* mousePos.y ;
-	elif not placed:
+	else:
 		position = original_pos
